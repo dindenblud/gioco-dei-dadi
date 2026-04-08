@@ -29,7 +29,7 @@ int main(){
 
         std::cout << "Prego, inserisca il numero di dadi con cui vuole giocare(massimo 3, inserire 4 per uscire, inserire 5 per vedere il conto): ";
         std::cin >> risposta;
-        if(risposta != 4 && risposta != 5){
+        if(risposta < 4 && risposta > 0){
             do
             {
             std::cout << "Vuoi puntare? (Y/N), ricorda che hai " << conto << " soldi sul conto" << std::endl;
@@ -100,11 +100,11 @@ int main(){
             std::cout << "A vostro carico ammontano " << conto << " soldi" << '\n';
             break;
         default:
-            std::cout << "Inserisci una risposta valida!";
+            std::cout << "Inserisci una risposta valida!\n";
             break;
         }
         if(risposta == 4){
-            std::cout << "Grazie per aver giocato!";
+            std::cout << "\nGrazie per aver giocato!\n";
             break;
         }
         if(puntata!=0){
